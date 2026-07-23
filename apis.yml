@@ -1,7 +1,26 @@
 aid: adludio
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adludio.png
 name: adludio
-description: adludio is a company surfaced as a portfolio company of balderton-capital and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Adludio is an AI-powered interactive mobile advertising company founded
+  in 2015 in London by Paul Coggins (originally Future Ad Labs). Its "Sensory Ad Science"
+  platform builds rich, interactive mobile ad units using touch, motion and haptic
+  interaction, sold on a cost-per-engagement rather than CPM model, with brand clients
+  including Nike, Microsoft, Coca-Cola and Estee Lauder. The company was backed by
+  Balderton Capital. As of 2026 the adludio.com domain 301-redirects to permate.com
+  (an unrelated Vietnamese partnership-automation platform), indicating the original
+  company is no longer operating a public web presence; no public API or developer
+  surface was found during enrichment.'
 url: https://raw.githubusercontent.com/api-evangelist/adludio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +28,20 @@ x-backed-by:
 - balderton-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: domain-redirects-away
+x-status-note: adludio.com 301-redirects to permate.com (unrelated company) as of
+  2026-07-17; no public API or developer surface found.
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
+- Advertising
+- AdTech
+- Mobile Advertising
+- Marketing Technology
+- Interactive Advertising
+- Creative
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adludio-domain-security.yml
 - type: Website
   url: https://adludio.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
