@@ -12,15 +12,19 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adludio.png
 name: adludio
-description: 'Adludio is an AI-powered interactive mobile advertising company founded
+description: 'Adludio was an AI-powered interactive mobile advertising company founded
   in 2015 in London by Paul Coggins (originally Future Ad Labs). Its "Sensory Ad Science"
-  platform builds rich, interactive mobile ad units using touch, motion and haptic
+  platform built rich, interactive mobile ad units using touch, motion and haptic
   interaction, sold on a cost-per-engagement rather than CPM model, with brand clients
   including Nike, Microsoft, Coca-Cola and Estee Lauder. The company was backed by
-  Balderton Capital. As of 2026 the adludio.com domain 301-redirects to permate.com
-  (an unrelated Vietnamese partnership-automation platform), indicating the original
-  company is no longer operating a public web presence; no public API or developer
-  surface was found during enrichment.'
+  Balderton Capital. Adludio is now defunct: ADLUDIO LIMITED (UK company number 08227542)
+  entered administration on 2024-08-23 and moved into creditors voluntary liquidation on
+  2025-08-28. The adludio.com domain 301-redirects to permate.com (an unrelated
+  partnership-automation platform), no api/docs/developer subdomain resolves, and the
+  residual adludio.webflow.io marketing mirror now returns 404. Adludio never published a
+  public API, developer portal or machine-readable contract; the only surviving developer
+  artifacts are four abandoned first-party npm packages under the @adludio scope
+  (interactive ad-runtime building blocks, not API clients), none released since 2019.'
 url: https://raw.githubusercontent.com/api-evangelist/adludio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -28,12 +32,16 @@ x-backed-by:
 - balderton-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
-x-status: domain-redirects-away
-x-status-note: adludio.com 301-redirects to permate.com (unrelated company) as of
-  2026-07-17; no public API or developer surface found.
+x-status: defunct
+x-status-note: 'ADLUDIO LIMITED (UK company 08227542) entered administration 2024-08-23
+  and creditors voluntary liquidation 2025-08-28. adludio.com 301-redirects to
+  permate.com (unrelated company), re-confirmed 2026-08-12; no api/docs/developer
+  subdomain resolves; adludio.webflow.io returns 404. No public API or developer surface
+  ever published.'
+x-status-source: https://find-and-update.company-information.service.gov.uk/company/08227542/insolvency
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-12'
 tags:
 - Company
 - Advertising
@@ -51,10 +59,37 @@ maintainers:
 common:
 - type: DomainSecurity
   url: security/adludio-domain-security.yml
+- type: Packages
+  url: packages/adludio-packages.yml
+- type: LLMsTxt
+  url: llms/adludio-llms.txt
 - type: Website
   url: https://adludio.com/
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: 'Re-ran full contract discovery (STEP 0b) against adludio.com and every candidate
+    subdomain — all miss. Found four genuine first-party npm packages under the @adludio
+    scope (searched), none an API client, none released since 2019. Confirmed the company
+    is in liquidation via UK Companies House. No WellKnown, SecurityTxt or AgentCard
+    pointer emitted: every well-known path 301s to an unrelated company''s SPA catch-all.'
+x-coverage:
+  state: none
+  reason: defunct
+  detail: 'ADLUDIO LIMITED (UK company 08227542) went into administration on 2024-08-23
+    and into creditors voluntary liquidation on 2025-08-28; adludio.com now 301-redirects
+    to permate.com, a different company, and no Adludio host or developer surface survives.'
+  evidence:
+  - url: https://adludio.com/
+    status: 301
+  - url: https://adludio.com/openapi.json
+    status: 301
+  - url: https://adludio.webflow.io/
+    status: 404
+  - url: https://find-and-update.company-information.service.gov.uk/company/08227542/insolvency
+    status: 200
+  - url: https://registry.npmjs.org/-/v1/search?text=adludio
+    status: 200
+  checked: '2026-08-12'

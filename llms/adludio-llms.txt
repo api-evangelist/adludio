@@ -1,0 +1,59 @@
+# Adludio
+
+> Adludio was an AI-powered interactive mobile advertising company, founded in 2015 in
+> London by Paul Coggins as Future Ad Labs and later renamed Adludio. Its "Sensory Ad
+> Science" platform built rich interactive mobile ad units using touch, motion and haptic
+> interaction, sold on a cost-per-engagement rather than a CPM basis, for brands including
+> Nike, Microsoft, Coca-Cola and Estee Lauder. It was backed by Balderton Capital.
+>
+> ADLUDIO IS DEFUNCT. Do not attempt to integrate with it. ADLUDIO LIMITED (UK company
+> number 08227542) entered administration on 2024-08-23 and moved into creditors voluntary
+> liquidation on 2025-08-28. The adludio.com domain now 301-redirects to permate.com, an
+> unrelated partnership-automation platform. No Adludio host resolves and no Adludio
+> developer surface remains online.
+
+generated: 2026-08-12
+method: generated
+source: apis.yml + repo artifacts (packages/, well-known/, security/) + UK Companies House
+
+## Status
+
+- Company status: creditors voluntary liquidation (since 2025-08-28)
+- Administration: 2024-08-23 to 2025-08-28
+- Companies House record: https://find-and-update.company-information.service.gov.uk/company/08227542
+- adludio.com: HTTP 301 to https://permate.com/ (a different company)
+- api.adludio.com, docs.adludio.com, developer.adludio.com: do not resolve (NXDOMAIN)
+- adludio.webflow.io (residual marketing mirror): HTTP 404
+
+## API surface
+
+None. Adludio never published a public API, developer portal, OpenAPI/AsyncAPI/GraphQL
+contract, MCP server or A2A agent card. Contract discovery was re-run on 2026-08-12
+against every candidate host and missed completely — see well-known/adludio-well-known.yml
+for the full probe record with status codes.
+
+If you are an agent looking for an Adludio API: there is nothing to call, and anything
+served today at adludio.com or permate.com belongs to Permate, not to Adludio.
+
+## Packages
+
+Four first-party npm packages survive on the registry. None is an API client SDK; they are
+internal building blocks of the interactive ad runtime, and all are abandoned.
+
+- [@adludio/erx](https://www.npmjs.com/package/@adludio/erx): minimal observables — v4.0.0, published 2019-09-18
+- [@adludio/fsm](https://www.npmjs.com/package/@adludio/fsm): finite state machines over erx — v3.0.0, published 2019-09-18
+- [@adludio/geometry](https://www.npmjs.com/package/@adludio/geometry): 2D point and geometry math — v2.0.1, published 2019-09-26
+- [adludio-outsourcing](https://www.npmjs.com/package/adludio-outsourcing): internal outsourcing platform tool — v1.3.15, published 2018-01-20
+
+Full detail, including maintainers and license: packages/adludio-packages.yml
+
+## Repo artifacts
+
+- packages/adludio-packages.yml — first-party npm packages, versions and publish dates
+- well-known/adludio-well-known.yml — well-known and contract-discovery probe record
+- security/adludio-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe of adludio.com
+
+## Optional
+
+- [Balderton Capital](https://www.balderton.com/) — the investor whose portfolio brought Adludio into this catalog
+- [Permate](https://permate.com/) — the unrelated company now holding the adludio.com redirect target; NOT Adludio

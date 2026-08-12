@@ -1,0 +1,111 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of https://adludio.com/.well-known/*
+name: Adludio Well-Known Probe
+description: >-
+  Well-known probe of the only host Adludio ever controlled, adludio.com. Every path
+  returns HTTP 301 to https://permate.com/ — an unrelated Vietnamese partnership-automation
+  platform now sitting on the domain. Following the redirect, permate.com answers HTTP 200
+  with text/html for EVERY path, including /openapi.json and /.well-known/agent-card.json;
+  that is an SPA catch-all, not a document, and it belongs to a different company besides.
+  NO well-known document is served. No WellKnown, SecurityTxt or AgentCard pointer is
+  emitted from this probe — a recorded absence is the finding.
+result: no-documents-found
+hit_count: 0
+hosts_probed:
+- adludio.com
+probes:
+- host: adludio.com
+  path: /.well-known/security.txt
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/openid-configuration
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/oauth-authorization-server
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/api-catalog
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/ai-plugin.json
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/agent-card.json
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+- host: adludio.com
+  path: /.well-known/agent.json
+  status: 301
+  redirect_to: https://permate.com/
+  followed_status: 200
+  followed_content_type: text/html
+  document: false
+  file: null
+x-contract-discovery:
+  note: >-
+    STEP 0b contract discovery ran against every candidate host and missed completely.
+  spec_paths_probed:
+  - url: https://adludio.com/openapi.json
+    status: 301
+    followed: 200 text/html at permate.com (SPA catch-all, different company)
+  - url: https://adludio.com/openapi.yaml
+    status: 301
+    followed: 200 text/html at permate.com (SPA catch-all, different company)
+  - url: https://adludio.com/swagger.json
+    status: 301
+    followed: 200 text/html at permate.com (SPA catch-all, different company)
+  - url: https://adludio.com/api-docs
+    status: 301
+    followed: 200 text/html at permate.com (SPA catch-all, different company)
+  - url: https://adludio.com/llms.txt
+    status: 301
+    followed: 200 text/html at permate.com (SPA catch-all, different company)
+  hosts_that_do_not_resolve:
+  - api.adludio.com
+  - docs.adludio.com
+  - developer.adludio.com
+  - app.adludio.com
+  - cdn.adludio.com
+  residual_marketing_site:
+  - url: https://adludio.webflow.io/
+    status: 404
+    note: >-
+      The Webflow-hosted marketing mirror that search engines still index has been taken
+      down; it now 404s.
+  graphql: not attempted — no host resolves to serve one
+  mcp: not attempted — no host resolves to serve one
+  ownership_note: >-
+    STEP 0c: nothing discovered behind the redirect may be attributed to Adludio. The
+    documents reachable at permate.com are served by Permate, a different company that now
+    holds the domain. Saving anything from that host would credit Adludio with another
+    company's surface.

@@ -1,0 +1,152 @@
+generated: '2026-08-12'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=adludio
+name: Adludio Packages
+description: >-
+  First-party npm packages published by Adludio (originally Future Ad Labs) under the
+  @adludio scope and the shared "adludio-dev" npm maintainer account. IMPORTANT: none of
+  these is an API client SDK. They are internal open-source building blocks for the
+  company's interactive ad runtime (observables, finite state machines, 2D geometry) plus
+  one internal outsourcing tool. Adludio never published a public API, so there is no
+  client library to wrap one. Every package is abandoned: the newest release across the
+  whole scope is 2019-09-26, and ADLUDIO LIMITED (UK company 08227542) entered
+  administration on 2024-08-23 and moved into creditors voluntary liquidation on
+  2025-08-28.
+package_count: 4
+official_count: 4
+sdk_count: 0
+registries_searched:
+- npm
+- PyPI
+- crates.io
+- RubyGems
+- pkg.go.dev
+- Maven Central
+- NuGet
+- Packagist
+packages:
+- name: '@adludio/geometry'
+  registry: npm
+  url: https://www.npmjs.com/package/@adludio/geometry
+  language: JavaScript
+  official: true
+  kind: library
+  api_client: false
+  version: 2.0.1
+  published: '2019-09-26'
+  first_published: '2015-08-12'
+  release_count: 6
+  license: Apache-2.0+
+  repository: https://github.com/futureadlabs/geometry
+  maintainers:
+  - adludio-dev
+  - max.chicos
+  - evenius
+  - bodil
+  description: 2D point and geometry math
+  note: >-
+    First-party by the @adludio scope and the adludio-dev maintainer account; the source
+    repo sits under github.com/FutureAdLabs, Adludio's original company name. Not an API
+    client. Last release 2019-09-26 — abandoned for roughly seven years.
+- name: '@adludio/fsm'
+  registry: npm
+  url: https://www.npmjs.com/package/@adludio/fsm
+  language: JavaScript
+  official: true
+  kind: library
+  api_client: false
+  version: 3.0.0
+  published: '2019-09-18'
+  first_published: '2015-08-12'
+  release_count: 5
+  license: Apache-2.0+
+  repository: https://github.com/futureadlabs/fsm
+  maintainers:
+  - adludio-dev
+  - max.chicos
+  - evenius
+  - bodil
+  description: Finite state machines over erx
+  note: >-
+    Ad-unit runtime state machine layer built on @adludio/erx. Not an API client. Last
+    release 2019-09-18.
+- name: '@adludio/erx'
+  registry: npm
+  url: https://www.npmjs.com/package/@adludio/erx
+  language: JavaScript
+  official: true
+  kind: library
+  api_client: false
+  version: 4.0.0
+  published: '2019-09-18'
+  first_published: '2016-01-19'
+  release_count: 3
+  license: Apache-2.0
+  repository: https://github.com/FutureAdLabs/erx
+  maintainers:
+  - adludio-dev
+  - max.chicos
+  - evenius
+  - andywilliams
+  description: Minimal observables
+  note: >-
+    Minimal observables library underpinning the Adludio ad runtime. Not an API client.
+    Last release 2019-09-18.
+- name: adludio-outsourcing
+  registry: npm
+  url: https://www.npmjs.com/package/adludio-outsourcing
+  language: JavaScript
+  official: true
+  kind: internal-tool
+  api_client: false
+  version: 1.3.15
+  published: '2018-01-20'
+  first_published: '2018-01-19'
+  release_count: 5
+  license: Apache-2.0
+  repository: null
+  maintainers:
+  - adludio-dev
+  - max.chicos
+  - evenius
+  description: The outsourcing platform for Adludio's... platform
+  note: >-
+    Unscoped but published by the same adludio-dev maintainer account. No repository field
+    is declared in the registry metadata. Last release 2018-01-20.
+not_found:
+- registry: PyPI
+  query: adludio
+  status: 404
+- registry: crates.io
+  query: adludio
+  result: no packages
+- registry: RubyGems
+  query: adludio
+  result: no packages
+- registry: Maven Central
+  query: adludio
+  result: no packages
+- registry: NuGet
+  query: adludio
+  result: no packages
+x-evidence:
+  fetched: '2026-08-12'
+  npm_search: https://registry.npmjs.org/-/v1/search?text=adludio
+  npm_search_total: 6
+  metadata_endpoints:
+  - https://registry.npmjs.org/@adludio%2Fgeometry
+  - https://registry.npmjs.org/@adludio%2Ffsm
+  - https://registry.npmjs.org/@adludio%2Ferx
+  - https://registry.npmjs.org/adludio-outsourcing
+  github_org_unverified: >-
+    github.com/FutureAdLabs and github.com/adludio could not be verified in this pass —
+    both the GitHub HTML site (503) and the unauthenticated REST API (rate limit exceeded)
+    refused this probe. Repository URLs above are recorded verbatim from npm registry
+    metadata, not re-confirmed against GitHub.
+x-abandonment:
+  newest_release_across_scope: '2019-09-26'
+  years_since_newest_release: 6.9
+  company_status: creditors voluntary liquidation since 2025-08-28
+  signal: >-
+    All first-party packages predate the company's 2024 administration by five years and
+    its 2025 liquidation by six. Nothing here is maintained or safe to depend on.
