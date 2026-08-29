@@ -37,6 +37,9 @@ description: 'Adludio was an AI-powered interactive mobile advertising company f
   artifacts are four abandoned first-party npm packages under the @adludio scope
   (interactive ad-runtime building blocks, not API clients), none released since 2019.'
 url: https://raw.githubusercontent.com/api-evangelist/adludio/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Adludio never published a public API, developer portal or machine-readable contract; the only surviving developer artifacts are four abandoned first-party npm packages under the @adludio scope (intera"
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
