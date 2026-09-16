@@ -18,30 +18,32 @@ accessModel:
   public: false
   label: Unknown
   confidence: low
-  source: []
+  source:
+  - url: https://adludio.com/
+    status: 301
+    note: declared website redirects to https://permate.com/affiliate-marketing/ — a different registrable
+      domain (adludio.com -> permate.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)
   generated: '2026-07-22'
   method: derived
-  source:
-  - {url: 'https://adludio.com/', status: 301, note: 'declared website redirects to https://permate.com/affiliate-marketing/ — a different registrable domain (adludio.com -> permate.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adludio.png
 name: adludio
-description: 'Adludio was an AI-powered interactive mobile advertising company founded
-  in 2015 in London by Paul Coggins (originally Future Ad Labs). Its "Sensory Ad Science"
-  platform built rich, interactive mobile ad units using touch, motion and haptic
-  interaction, sold on a cost-per-engagement rather than CPM model, with brand clients
-  including Nike, Microsoft, Coca-Cola and Estee Lauder. The company was backed by
-  Balderton Capital. Adludio is now defunct: ADLUDIO LIMITED (UK company number 08227542)
-  entered administration on 2024-08-23 and moved into creditors voluntary liquidation on
-  2025-08-28. The adludio.com domain 301-redirects to permate.com (an unrelated
-  partnership-automation platform), no api/docs/developer subdomain resolves, and the
-  residual adludio.webflow.io marketing mirror now returns 404. Adludio never published a
-  public API, developer portal or machine-readable contract; the only surviving developer
-  artifacts are four abandoned first-party npm packages under the @adludio scope
-  (interactive ad-runtime building blocks, not API clients), none released since 2019.'
+description: 'Adludio was an AI-powered interactive mobile advertising company founded in 2015 in London
+  by Paul Coggins (originally Future Ad Labs). Its "Sensory Ad Science" platform built rich, interactive
+  mobile ad units using touch, motion and haptic interaction, sold on a cost-per-engagement rather than
+  CPM model, with brand clients including Nike, Microsoft, Coca-Cola and Estee Lauder. The company was
+  backed by Balderton Capital. Adludio is now defunct: ADLUDIO LIMITED (UK company number 08227542) entered
+  administration on 2024-08-23 and moved into creditors voluntary liquidation on 2025-08-28. The adludio.com
+  domain 301-redirects to permate.com (an unrelated partnership-automation platform), no api/docs/developer
+  subdomain resolves, and the residual adludio.webflow.io marketing mirror now returns 404. Adludio never
+  published a public API, developer portal or machine-readable contract; the only surviving developer
+  artifacts are four abandoned first-party npm packages under the @adludio scope (interactive ad-runtime
+  building blocks, not API clients), none released since 2019.'
 url: https://raw.githubusercontent.com/api-evangelist/adludio/refs/heads/main/apis.yml
 x-api-posture: no-product-api
 x-api-posture-basis: observed
-x-api-posture-note: "Adludio never published a public API, developer portal or machine-readable contract; the only surviving developer artifacts are four abandoned first-party npm packages under the @adludio scope (intera"
+x-api-posture-note: Adludio never published a public API, developer portal or machine-readable contract;
+  the only surviving developer artifacts are four abandoned first-party npm packages under the @adludio
+  scope (intera
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -49,15 +51,14 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 x-status: defunct
-x-status-note: 'ADLUDIO LIMITED (UK company 08227542) entered administration 2024-08-23
-  and creditors voluntary liquidation 2025-08-28. adludio.com 301-redirects to
-  permate.com (unrelated company), re-confirmed 2026-08-12; no api/docs/developer
-  subdomain resolves; adludio.webflow.io returns 404. No public API or developer surface
-  ever published.'
+x-status-note: ADLUDIO LIMITED (UK company 08227542) entered administration 2024-08-23 and creditors voluntary
+  liquidation 2025-08-28. adludio.com 301-redirects to permate.com (unrelated company), re-confirmed 2026-08-12;
+  no api/docs/developer subdomain resolves; adludio.webflow.io returns 404. No public API or developer
+  surface ever published.
 x-status-source: https://find-and-update.company-information.service.gov.uk/company/08227542/insolvency
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-08-12'
+modified: '2026-09-15'
 tags:
 - Company
 - Advertising
@@ -66,6 +67,7 @@ tags:
 - Marketing Technology
 - Interactive Advertising
 - Creative
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -86,17 +88,17 @@ x-enrichment:
   status: minimal
   artifacts_added: 3
   pass: local-v1
-  note: 'Re-ran full contract discovery (STEP 0b) against adludio.com and every candidate
-    subdomain — all miss. Found four genuine first-party npm packages under the @adludio
-    scope (searched), none an API client, none released since 2019. Confirmed the company
-    is in liquidation via UK Companies House. No WellKnown, SecurityTxt or AgentCard
-    pointer emitted: every well-known path 301s to an unrelated company''s SPA catch-all.'
+  note: 'Re-ran full contract discovery (STEP 0b) against adludio.com and every candidate subdomain —
+    all miss. Found four genuine first-party npm packages under the @adludio scope (searched), none an
+    API client, none released since 2019. Confirmed the company is in liquidation via UK Companies House.
+    No WellKnown, SecurityTxt or AgentCard pointer emitted: every well-known path 301s to an unrelated
+    company''s SPA catch-all.'
 x-coverage:
   state: none
   reason: defunct
-  detail: 'ADLUDIO LIMITED (UK company 08227542) went into administration on 2024-08-23
-    and into creditors voluntary liquidation on 2025-08-28; adludio.com now 301-redirects
-    to permate.com, a different company, and no Adludio host or developer surface survives.'
+  detail: ADLUDIO LIMITED (UK company 08227542) went into administration on 2024-08-23 and into creditors
+    voluntary liquidation on 2025-08-28; adludio.com now 301-redirects to permate.com, a different company,
+    and no Adludio host or developer surface survives.
   evidence:
   - url: https://adludio.com/
     status: 301
