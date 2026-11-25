@@ -82,13 +82,13 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Adludio Domain Security](https://apis.io/security/adludio/adludio-domain-security/)
+- [adludio Domain Security](https://apis.io/security/adludio/adludio-domain-security/)
 
 ## Where to find this API
 
 Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Website](https://adludio.com/)
+- [Sign up](https://permate.com/auth/partner/sign-up)
 
 ## API Evangelist rating
 
